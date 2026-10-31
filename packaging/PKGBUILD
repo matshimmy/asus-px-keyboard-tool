@@ -4,14 +4,14 @@ pkgver=r45.4766393   # overwritten by pkgver()
 pkgrel=1
 pkgdesc="Fix Fn-lock and missing hotkeys on Asus PX/ROG keyboards via HID-BPF"
 arch=('x86_64')
-url="https://github.com/a-chaudhari/asus-px-keyboard-tool"
+url="https://github.com/matshimmy/asus-px-keyboard-tool"
 license=('GPL-2.0-or-later')
 makedepends=('git' 'rust' 'clang' 'llvm')
 depends=('glibc' 'gcc-libs' 'systemd-libs' 'libevdev' 'elfutils' 'zlib')
 provides=("$_pkgname")
 conflicts=("$_pkgname")
 options=('!lto' '!debug')   # no LTO (lld can't link GCC-LTO libbpf.a); skip the split -debug package
-source=("$_pkgname::git+https://github.com/a-chaudhari/asus-px-keyboard-tool.git")
+source=("$_pkgname::git+https://github.com/matshimmy/asus-px-keyboard-tool.git#branch=g14")
 sha256sums=('SKIP')
 
 pkgver() {
